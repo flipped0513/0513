@@ -1,0 +1,13 @@
+#include <stdio.h>
+void main()
+{
+    /*用 do-while 语句颠倒整数的各位*/
+    int i, r;
+    printf("Input an integer:\n");
+    scanf("%d", &i);
+    do{
+        r = i % 10;
+        printf("%d", r);
+    }while((i /= 10) != 0);
+    printf("\n");
+}
