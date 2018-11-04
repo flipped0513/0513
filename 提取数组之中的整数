@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main(void)
+{
+    char str[1000];
+    int i, count, a[100];
+    int p, q, r;
+
+    gets(str);
+
+    r = 0;
+    count = 0;
+
+    while(1)
+    {
+        while(str[r] && (str[r]<'0' || str[r]>'9'))
+            r++;        //跳过非数字
+
+        if(str[r])
+        {
+            p = r;        //p指向数字子串开头
+            q = r + 1;  //q寻找数字串结尾
+            a[count] = str[r]-'0';
+
+            while(str[q]>='0' && str[q]<='9')
+            {
+                a[count] = 10*a[count]+(str[q]-'0');
+                q++;
+            }
+
+            r = q;    //新起点
+            count++;
+        }
+        else
+            break;
+    }
+
+    printf("共计 %d 个整数：", count);
+    for(i=0; i<count; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+
+    return 0;
+}
