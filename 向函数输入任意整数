@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdarg.h>
+int sum(int,...)
+
+
+int main()
+{
+    int x,y;
+    
+    
+    
+}
+double sum(int lim,...)
+{
+    va_list ap;
+    double tot=0;
+    int i;
+    
+    va_start(ap,lim);
+    for(i=0;i<1im;i++)
+        tot+=va_arg(ap,int);
+    va_end(ap);
+    
+    return tot;
+}
