@@ -1,0 +1,70 @@
+.all
+{
+    display:flex;
+    min-height: 100vh;
+    flex-direction:column;
+}
+.header,.footer
+{
+    flex:1;
+    background:black;
+}
+.all-body
+{
+    display:flex;
+    flex:1;
+}
+.body-nav,.body-asd
+{
+    flex:0 0 12em;
+}
+.body-nav
+{
+    order:-1;
+    background: pink;
+}
+.body-content
+{
+    flex:1;
+    background:grey;
+}
+.menu
+{
+    font-size: 0;
+    padding: 0;
+    height: 100%;
+    padding-left: 5%;
+    background-color: #00a2ca;
+}
+.menubar
+{
+    margin: 0 auto;
+    list-style-type: none;
+    width: 100px;
+    overflow-y: auto;
+}
+.menubar li
+
+	{
+        padding:0px 5px;
+        cursor: pointer;
+        line-height: 50px;
+    }
+    .menubar li:hover	
+    {	
+        background-color:#0095bb;	
+    }	
+    .menubar li.menu-value	
+    {		
+        background-color: #0095bb;		
+    } 	
+    .menubar a	
+    {		
+        display: block;		
+        height: 50px;		
+        font-family: "微软雅黑","Microsoft Yahei","Hiragino Sans GB",tahoma,arial,"宋体" ;		
+        font-size: 15px;		
+        text-align: center;		
+        text-decoration: none;		
+        color: #fff;	
+    }
